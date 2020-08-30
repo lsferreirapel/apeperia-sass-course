@@ -1,0 +1,10 @@
+{
+  "name": "apeperia-sass-course",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "lsferreirapel",
+  "license": "MIT",
+  "scripts": {
+    "compass-start": "compass watch css/estilos.scss"
+  }
+}

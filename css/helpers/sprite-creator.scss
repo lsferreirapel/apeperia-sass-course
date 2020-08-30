@@ -1,0 +1,9 @@
+// check and x icons
+$sprite-spacing: 5px;
+$sprite-sprite-dimensions: true;
+@import 'sprite/*.png';
+
+// plataforma icons (android, apple, blackberry and windows)
+$plataformas-spacing: 5px;
+$plataformas-layout:horizontal;
+@import 'plataformas/*.png';

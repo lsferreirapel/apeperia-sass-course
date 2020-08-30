@@ -1,0 +1,68 @@
+/** Destaque **/
+.destaque {
+    background: url(../imagens/destaque.jpg) center bottom repeat-x;
+    -webkit-background-size: cover;
+    background-size: cover;
+    color: white;
+    height: 330px;
+    padding-top: 10em;
+  
+    p {
+      width: 30em;
+  
+      &:first-child {
+        width: 30em;
+        font-size: 1.3em;
+        line-height: 1.1;
+      }
+  
+      &:first-child:first-line {
+        font-size: 2.2em;
+        font-weight: bold;
+      }
+    }
+  
+    button {
+      margin-top: 1em;
+      background: $--color-primary;
+      border: 0;
+      padding: .6em;
+      font-size: 1.2em;
+      @include border-radius-setup(50px);
+      @extend %default-shadow;
+      font-weight: bold;
+    } 
+    
+    @include mq('mobile')  {
+      font-size: 14px;
+      height: 250px;
+    }
+  }
+
+  
+.duas-colunas {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+  columns: 1;
+
+  h3 {
+    margin: 0;
+  }
+} 
+
+
+.plataformas {
+  padding: 0;
+  
+  li {
+    display: inline-block;
+    width: 50px;
+    height: 60px;
+    @extend %image-replacement;
+    margin: 1em 1.5em 0 0;
+  }
+}
+
+@include all-plataformas-sprites;
+  

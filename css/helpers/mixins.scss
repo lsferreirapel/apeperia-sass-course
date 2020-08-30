@@ -1,0 +1,38 @@
+@import "compass/css3";
+@import "compass/utilities";
+
+// Mixins
+@mixin border-radius-setup($--value-ray: .3em) {
+  @include border-radius($--value-ray);
+};
+
+
+// Media Querie Mixin
+$breakpoints: (
+  "mobile": 980px1,
+);
+@mixin mq($width, $type: max) {
+  @if map-has-key($breakpoints, $width) {
+    $width: map-get($breakpoints, $width);
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+};
+
+
+// Placeholders 
+%image-replacement {
+  text-indent: -9999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+%default-shadow {
+  @include box-shadow(black 0px 2px 5px);
+}
+
+// Functions
+@function rem($multiplier) {
+  @return round($multiplier * $--font-size-default);
+}
+  
